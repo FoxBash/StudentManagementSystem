@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Students</title>
+  <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container">
+  <form class="was-validated" th:action="@{/updateStudent}" th:object="${student}" method="post">
+    <input type="hidden" th:field="*{id}">
+    <div class="form-group">
+      <label for="uname">FirstName:</label>
+      <input type="text" class="form-control" id="uname" th:field="*{firstName}" placeholder="Enter firstname" name="uname" required>
+    </div>
+    <div class="form-group">
+      <label for="uname">LastName:</label>
+      <input type="text" class="form-control" id="uname" th:field="*{lastName}" placeholder="Enter lastname" name="uname" required>
+    </div>
+    <div class="form-group">
+      <label for="uname">Email:</label>
+      <input type="email" class="form-control" id="uname" th:field="*{email}"placeholder="Enter email" name="uname" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</body>
+</html>ml>
