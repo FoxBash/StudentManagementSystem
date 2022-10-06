@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" th:href="@{/home}">Home</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link btn-success" th:href="@{/register}">Register</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="container">
+  <form action="#" th:action="@{/login}" id="loginForm" method="post">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" placeholder="Enter Username" id="username" name="username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" placeholder="Enter password" id="password" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<a class="btn btn-success" th:href="@{/register}">New here</a>
+
+
+</body>
+</html>
